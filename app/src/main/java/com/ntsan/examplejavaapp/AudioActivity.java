@@ -1,5 +1,6 @@
 package com.ntsan.examplejavaapp;
 
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -35,7 +36,9 @@ public class AudioActivity extends AppCompatActivity {
         binding = ActivityAudioBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+        getSupportActionBar().hide();
 
+        binding.nextActivityBtn.setOnClickListener(this::nextActivity);
         binding.playBtn.setOnClickListener(this::start);
         binding.pauseBtn.setOnClickListener(this::pause);
 
@@ -44,7 +47,7 @@ public class AudioActivity extends AppCompatActivity {
         int maxVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
         int currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
 
-        mediaPlayer = MediaPlayer.create(this, R.raw.oldcar);
+        mediaPlayer = MediaPlayer.create(this, R.raw.bummer);
 
         SeekBar volume = binding.seekBar;
         volume.setMax(maxVolume);
@@ -90,8 +93,12 @@ public class AudioActivity extends AppCompatActivity {
             public void run() {
                 revFor.setProgress(mediaPlayer.getCurrentPosition());
             }
-        }, 0, 100);
+        }, 0, 1000);
 
     }
 
+    private void nextActivity(View view) {
+        Intent intent = new Intent(this, VideoActivity.class);
+        startActivity(intent);
+    }
 }

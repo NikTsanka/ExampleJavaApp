@@ -24,9 +24,10 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/ic_profile"
+                android:layout_marginTop="32dp"
                 android:background="@color/purple_200"
-                app:shapeAppearance="@style/circleImageView"/>
+                app:shapeAppearance="@style/circleImageView"
+                app:srcCompat="@drawable/ic_profile" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/usernameInput"
@@ -156,8 +157,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Next Activity"
-                android:layout_marginTop="24dp"/>
+                android:layout_marginTop="24dp"
+                android:text="Next Activity" />
+
+            <Button
+                android:id="@+id/hiOrLowBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:text="Higher or Lower" />
+
+            <Button
+                android:id="@+id/musicPlayerBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="74dp"
+                android:text="Music Player" />
         </LinearLayout>
     </ScrollView>
 

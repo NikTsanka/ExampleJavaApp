@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ExampleJavaApp">
-        <activity android:name=".AudioActivityKt"></activity>
+        <activity android:name=".AudioPlayerActivity"></activity>
+        <activity android:name=".HigherOrLowerActivity" />
+        <activity android:name=".VideoActivity" />
+        <activity android:name=".AudioActivityKt" />
         <activity android:name=".AudioActivity" />
         <activity android:name=".BackgroundActivity" />
         <activity android:name=".SlowFadingActivity" />

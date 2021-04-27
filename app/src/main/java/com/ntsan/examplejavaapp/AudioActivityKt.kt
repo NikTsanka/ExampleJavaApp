@@ -1,5 +1,6 @@
 package com.ntsan.examplejavaapp
 
+import android.content.Intent
 import android.media.AudioManager
 import android.media.MediaPlayer
 import android.os.Bundle
@@ -33,6 +34,10 @@ class AudioActivityKt : AppCompatActivity() {
         val view: View = binding!!.root
         setContentView(view)
 
+        binding?.nextActivityBtn?.setOnClickListener{
+            nextActivity(it)
+        }
+
         binding?.playBtn?.setOnClickListener {
             start(it)
         }
@@ -46,7 +51,7 @@ class AudioActivityKt : AppCompatActivity() {
         val maxVolume = audioManager!!.getStreamMaxVolume(AudioManager.STREAM_MUSIC)
         val currentVolume = audioManager!!.getStreamVolume(AudioManager.STREAM_MUSIC)
 
-        mediaPlayer = MediaPlayer.create(this, R.raw.oldcar)
+        mediaPlayer = MediaPlayer.create(this, R.raw.bummer)
 
         val volume: SeekBar = binding!!.seekBar
         volume.max = maxVolume
@@ -79,8 +84,12 @@ class AudioActivityKt : AppCompatActivity() {
             override fun run() {
                 revFor.progress = mediaPlayer!!.currentPosition
             }
-        }, 0, 100)
+        }, 0, 1000)
     }
 
+    private fun nextActivity(view: View) {
+        val intent = Intent(this, VideoActivity::class.java)
+        startActivity(intent)
+    }
 
 }

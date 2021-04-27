@@ -25,10 +25,21 @@ public class MainActivity extends AppCompatActivity {
 
 
         binding.button.setOnClickListener(this::nextActivity);
+        binding.hiOrLowBtn.setOnClickListener(this::hiOrLowActivity);
+        binding.musicPlayerBtn.setOnClickListener(this::playerActivity);
     }
 
     public void nextActivity(View view) {
         Intent intent = new Intent(this, GifActivity.class);
+        startActivity(intent);
+    }
+    public void hiOrLowActivity(View view) {
+        Intent intent = new Intent(this, HigherOrLowerActivity.class);
+        startActivity(intent);
+    }
+
+    public void playerActivity(View view) {
+        Intent intent = new Intent(this, AudioPlayerActivity.class);
         startActivity(intent);
     }
 

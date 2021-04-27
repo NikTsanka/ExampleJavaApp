@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="thinking">მე ჩავიფიქრე რიცხვი</string>
+    <string name="guess">გამოიცნობ?</string>
+    <string name="guessButton">გამოცნობა</string>
+</resources>

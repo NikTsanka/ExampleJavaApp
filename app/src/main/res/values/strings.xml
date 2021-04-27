@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">ExampleJavaApp</string>
+    <string name="app_name" translatable="false">ExampleJavaApp</string>
+
+    <string name="thinking">I am thinking of a number</string>
+    <string name="guess">Can you guess it?</string>
+    <string name="guessButton">GUESS</string>
+
 </resources>

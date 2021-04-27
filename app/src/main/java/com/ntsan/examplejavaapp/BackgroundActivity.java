@@ -40,7 +40,7 @@ public class BackgroundActivity extends AppCompatActivity {
     }
 
     private void nextActivity(View view){
-        Intent intent = new Intent(this, AudioActivity.class);
+        Intent intent = new Intent(this, AudioActivityKt.class);
         startActivity(intent);
     }
 }
